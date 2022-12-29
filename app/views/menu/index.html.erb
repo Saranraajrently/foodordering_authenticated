@@ -1,0 +1,11 @@
+<h1>Listing Menu</h1>
+<h1><%= current_user.id%></h1>
+<% @menus.each do |menu| %>
+        
+            <h4 class="card__title"><%= menu.menu_name %></h4>
+            <span class="card__price">Rs.<%= menu.menu_price %></span>
+          </div>
+          <p class="card__text"><%= menu.menu_type %></p>
+        </div>
+      </div>
+      <%end%>

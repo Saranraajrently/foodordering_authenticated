@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "userindex.css" %>
+<header class="header-area">
+  <div class="navbar-area">
+    <div class="container">
+      <nav class="site-navbar">
+        <a href="<%root_path %>" class="site-logo">SMART ORDER</a>
+        <ul>
+          <li> <%= link_to "Menu List", menus_path %>
+          </li>
+          <li> <%= link_to "Add  User", new_user_path %> </li>
+          <li><a href="#">Add Admin</a></li>
+        </ul>
+
+        <button class="nav-toggler">
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>User Id</th>
+          <th>User Name</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @users.each do |user| %>
+        <tr>
+          <td data-th="User Id"><%= user.id %></td>
+          <td data-th="UserName"><%= link_to user.username, user %></td>
+          <% end %>
+        </tr>
+      </tr>
+      
+    </tbody>
+  </table>
+</header>
+ 

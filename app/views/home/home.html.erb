@@ -1,0 +1,7 @@
+
+<h1>Home  Page</h1>
+<% if ! user_signed_in? && ! restaurant_admin_signed_in? %> 
+  <%= link_to "User", user_session_path(@user) %>
+  <%= link_to "Admin", restaurant_admin_session_path(@restaurant_admin) %>
+  
+  <% end %>

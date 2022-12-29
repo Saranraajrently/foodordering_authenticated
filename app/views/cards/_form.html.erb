@@ -1,0 +1,13 @@
+<%= form_with model: [ @user, @user.cards.build ] do |form| %>
+  <p>
+    <%= form.label :card_name %><br>
+    <%= form.text_field :card_name %>
+  </p>
+  <p>
+    <%= form.label :card_number %><br>
+    <%= form.password_field :card_number %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

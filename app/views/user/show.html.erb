@@ -1,0 +1,12 @@
+
+  <body>
+
+    <div>
+       Welcome Hello <%= current_user.email %> 
+    </div> 
+<% @menus.each do |menu| %>
+<h5>Id : <%=menu.id%></h5>
+<h5>Name : <%= menu.menu_name %></h5> 
+<%end%>
+  </body>
+ 

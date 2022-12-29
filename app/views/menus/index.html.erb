@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "menuindex.css" %>
+<header class="header-area">
+    <div class="navbar-area">
+      <div class="container">
+        <nav class="site-navbar">
+          <a href="" class="site-logo">SMART ORDER</a>
+          <ul>
+            <li> <%= link_to "User List", users_path %></li>
+            <li><a href="#">Add Admin</a></li>
+            <li> <%= link_to "Add  Menu", new_menu_path %> </li>
+          </ul>
+  
+          <button class="nav-toggler">
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </div>
+<div class="wrapper">
+    <h2 class="head-title">Explore Our Foods</h2>
+    <p class="head-text">Order Online , Avail Discounts , Get Served On Time At Home</p>
+    <div class="cards">
+        <% @menus.each do |menu| %>
+        <div class="card">
+        <img class="card__image" height="300px" width="300px"src="<%= menu.menu_image%>" alt="">
+        <div class="card__content">
+          <div class="card__header">
+            <h4 class="card__title"><%= menu.menu_name %></h4>
+            <span class="card__price">Rs.<%= menu.menu_price %></span>
+          </div>
+          <p class="card__text"><%= menu.menu_type %></p>
+        </div>
+      </div>
+      <%end%>
+    </div>
+    
+</div>
